@@ -34,6 +34,7 @@ BottomNavigationView navigationView;
                         break;
                     case R.id.nav_donasi:
                         fragment = new Fragment2();
+                        break;
                     case R.id.nav_profile:
                         fragment = new Fragment3();
                         break;

@@ -10,12 +10,18 @@
     <!-- TODO: Update blank fragment layout -->
     <!-- set layout for slider -->
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:id="@+id/top"
+        android:background="@drawable/bg4"/>
+    <RelativeLayout
         android:id="@+id/layout_top"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        >
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -60,7 +66,8 @@
             android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/linear1">
+            android:id="@+id/linear1"
+            android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="140dp"
                 android:layout_height="140dp"
@@ -80,7 +87,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_below="@+id/linear1">
+            android:layout_below="@+id/linear1"
+            android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="140dp"
                 android:layout_height="140dp"
@@ -89,7 +97,7 @@
             <ImageView
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/btn_acara"
+                android:src="@drawable/btn_yayasan"
                 />
 
         </LinearLayout>
