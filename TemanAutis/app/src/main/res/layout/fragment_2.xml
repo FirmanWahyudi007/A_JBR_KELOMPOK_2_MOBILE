@@ -3,10 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rectangle_11"
+    android:background="@drawable/bg3"
     tools:context=".Fragment2">
 
     <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="253dp"
+            android:layout_height="194dp"
+            android:src="@drawable/children"
+            android:layout_marginTop="119dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/children"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/children"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="YUK BERDONASI UNTUK TEMAN-TEMAN AUTIS"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="256dp"
+            android:layout_height="49dp"
+            android:background="@drawable/btn_2"
+            android:layout_marginTop="480dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="78dp"
+            android:layout_marginLeft="78dp"
+            android:text="BERDONASI"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            />
+    </RelativeLayout>
 
 
 </RelativeLayout>

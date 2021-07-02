@@ -68,15 +68,15 @@
             android:layout_marginLeft="20dp"
             android:id="@+id/linear1"
             android:gravity="center_horizontal">
-            <ImageView
+            <Button
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/btn_donasi"/>
+                android:background="@drawable/btn_donasi"/>
 
-            <ImageView
+            <Button
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/btn_acara"
+                android:background="@drawable/btn_acara"
                 />
 
         </LinearLayout>
@@ -89,15 +89,15 @@
             android:layout_marginLeft="20dp"
             android:layout_below="@+id/linear1"
             android:gravity="center_horizontal">
-            <ImageView
+            <Button
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/btn_artikel"/>
+                android:background="@drawable/btn_artikel"/>
 
-            <ImageView
+            <Button
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/btn_yayasan"
+                android:background="@drawable/btn_yayasan"
                 />
 
         </LinearLayout>
