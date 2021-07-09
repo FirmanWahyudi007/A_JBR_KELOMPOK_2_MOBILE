@@ -4,9 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment3"
-    android:background="@drawable/rectangle_11">
+    android:background="@drawable/bg3">
 
     <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="573dp"
+        android:background="@drawable/bg5"
+        android:layout_marginTop="158dp">
+
+        <Button
+            android:layout_width="256dp"
+            android:layout_height="49dp"
+            android:background="@drawable/btn"
+            android:layout_marginTop="452dp"
+            android:layout_marginLeft="78dp"
+            android:layout_marginRight="78dp"
+            android:text="LOGOUT"/>
+        <Button
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_1"
+            android:layout_marginTop="137dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:text="DETAIL PROFILE"
+            />
+        <Button
+        android:layout_width="327dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_1"
+        android:layout_marginTop="194dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginLeft="42dp"
+            android:text="TENTANG"/>
+
+    </RelativeLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/people"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:layout_marginRight="143dp"
+        android:layout_marginLeft="143dp"
+        android:layout_gravity="center_horizontal"/>
 
 
 </FrameLayout>
