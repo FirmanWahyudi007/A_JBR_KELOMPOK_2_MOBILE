@@ -1,5 +1,6 @@
 package com.example.temanautis;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.temanautis._sliders.FragmentSlider;
@@ -86,6 +88,14 @@ public class Fragment1 extends Fragment {
         sliderView = (SliderView) rootview.findViewById(R.id.sliderView);
         mLinearLayout = (LinearLayout) rootview.findViewById(R.id.pagesContainer);
         setupSlider();
+        Button artikel = (Button) rootview.findViewById(R.id.artikel);
+        artikel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Artikel.class);
+                startActivity(intent);
+            }
+        });
         return rootview;
     }
     private void setupSlider() {

@@ -90,6 +90,7 @@
             android:layout_below="@+id/linear1"
             android:gravity="center_horizontal">
             <Button
+                android:id="@+id/artikel"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:background="@drawable/btn_artikel"/>
