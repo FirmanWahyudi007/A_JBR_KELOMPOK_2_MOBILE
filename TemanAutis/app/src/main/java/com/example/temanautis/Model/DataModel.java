@@ -1,5 +1,6 @@
 package com.example.temanautis.Model;
 
+
 public class DataModel {
     private int id;
     private String judul_artikel, isi_artikel, sampul;

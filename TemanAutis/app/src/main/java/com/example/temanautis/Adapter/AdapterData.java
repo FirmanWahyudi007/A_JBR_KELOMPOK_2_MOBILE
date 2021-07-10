@@ -1,6 +1,8 @@
 package com.example.temanautis.Adapter;
 
 import android.content.Context;
+import android.os.Build;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +39,10 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
         DataModel dm = listArtikel.get(position);
         holder.tvId.setText(String.valueOf(dm.getId()));
         holder.tvJudul.setText(dm.getJudul_artikel());
-        holder.tvIsi.setText(dm.getIsi_artikel());
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel(), Html.FROM_HTML_MODE_LEGACY));
+        } else
+            holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel()));
 
     }
 
@@ -53,7 +57,6 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
 
         public HolderData(@NonNull View itemView) {
             super(itemView);
-
             tvId = itemView.findViewById(R.id.tv_id);
             tvJudul = itemView.findViewById(R.id.tv_judul);
             tvIsi = itemView.findViewById(R.id.tv_isi);

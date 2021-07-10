@@ -25,6 +25,7 @@ public class Artikel extends AppCompatActivity {
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataModel> lisData = new ArrayList<>();
+    private String isi_artikel ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class Artikel extends AppCompatActivity {
                 Toast.makeText(Artikel.this, "kode : "+kode+" | pesan : "+pesan, Toast.LENGTH_SHORT).show();
 
                 lisData = response.body().getData();
+
                 adData = new AdapterData(Artikel.this, lisData);
                 rvData.setAdapter(adData);
                 adData.notifyDataSetChanged();
