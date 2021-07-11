@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.temanautis.API.APIRequestData;
 import com.example.temanautis.API.RetroServer;
 import com.example.temanautis.Model.Login;
+import com.google.android.material.textfield.TextInputLayout;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,7 +21,7 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText etEmail, etPassword;
+    TextInputLayout etEmail, etPassword;
     String Email, Password;
     APIRequestData apiInterface;
 
@@ -29,13 +30,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        etEmail = findViewById(R.id.editTextEmail);
-        etPassword = findViewById(R.id.editTextPassword);
-
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M){
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
         setContentView(R.layout.activity_login);
+
+        etEmail = findViewById(R.id.textInputEmail);
+        etPassword = findViewById(R.id.textInputPassword);
     }
 
 
@@ -47,8 +48,8 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void onMasukClick(View view){
         apiInterface = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Log.d("TAG", "onMasukClick: "+etEmail.getText().toString());
-        Call<Login> loginCall = apiInterface.loginresponse(etEmail.getText().toString(),etPassword.getText().toString());
+        Log.d("TAG", "onMasukClick: "+etEmail.getEditText().getText().toString());
+        Call<Login> loginCall = apiInterface.loginresponse(etEmail.getEditText().getText().toString(),etPassword.getEditText().getText().toString());
         loginCall.enqueue(new Callback<Login>() {
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
