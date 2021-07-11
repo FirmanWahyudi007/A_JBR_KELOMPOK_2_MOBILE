@@ -1,6 +1,7 @@
 package com.example.temanautis.API;
 
 import com.example.temanautis.Model.Login;
+import com.example.temanautis.Model.Register;
 import com.example.temanautis.Model.ResponseModel;
 
 import retrofit2.Call;
@@ -21,5 +22,14 @@ public interface APIRequestData {
     Call<Login> loginresponse (
             @Query("email") String email,
             @Query("password") String password
+    );
+    @Headers({"Accept: application/json"})
+    //@FormUrlEncoded
+    @POST("register")
+    Call<Register> registerresponse (
+            @Query("name") String name,
+            @Query("email") String email,
+            @Query("password") String password,
+            @Query("password_confirmation") String password_confirmation
     );
 }
