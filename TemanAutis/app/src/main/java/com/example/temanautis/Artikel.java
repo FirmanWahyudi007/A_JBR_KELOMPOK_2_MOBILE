@@ -25,7 +25,6 @@ public class Artikel extends AppCompatActivity {
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataModel> lisData = new ArrayList<>();
-    private String isi_artikel ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class Artikel extends AppCompatActivity {
                 int kode = response.body().getKode();
                 String pesan = response.body().getPesan();
 
-                Toast.makeText(Artikel.this, "kode : "+kode+" | pesan : "+pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Artikel.this, "code : "+kode+" | message : "+pesan, Toast.LENGTH_SHORT).show();
 
                 lisData = response.body().getData();
 
@@ -58,7 +57,7 @@ public class Artikel extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseModel> call, Throwable t) {
-                Toast.makeText(Artikel.this, "Gagal Menghubungi Server"+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Artikel.this, "Gagal Menghubungi Server "+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

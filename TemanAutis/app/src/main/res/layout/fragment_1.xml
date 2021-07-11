@@ -96,6 +96,7 @@
                 android:background="@drawable/btn_artikel"/>
 
             <Button
+                android:id="@+id/yayasan"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:background="@drawable/btn_yayasan"

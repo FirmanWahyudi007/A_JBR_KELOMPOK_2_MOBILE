@@ -96,6 +96,14 @@ public class Fragment1 extends Fragment {
                 startActivity(intent);
             }
         });
+        Button yayasan = (Button) rootview.findViewById(R.id.yayasan);
+        yayasan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Yayasan.class);
+                startActivity(intent);
+            }
+        });
         return rootview;
     }
     private void setupSlider() {

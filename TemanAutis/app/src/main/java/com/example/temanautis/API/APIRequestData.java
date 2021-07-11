@@ -2,6 +2,8 @@ package com.example.temanautis.API;
 
 import com.example.temanautis.Model.Login;
 import com.example.temanautis.Model.ResponseModel;
+import com.example.temanautis.Model.YayasanModel;
+import com.example.temanautis.Model.YayasanResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -14,6 +16,9 @@ import retrofit2.http.Query;
 public interface APIRequestData {
     @GET("artikel")
     Call<ResponseModel> ardArtikelData();
+
+    @GET("yayasan")
+    Call<YayasanResponse> ardYayasanData();
 
     @Headers({"Accept: application/json"})
     //@FormUrlEncoded
