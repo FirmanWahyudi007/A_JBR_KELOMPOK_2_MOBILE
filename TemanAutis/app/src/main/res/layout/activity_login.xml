@@ -88,7 +88,7 @@
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:onClick="onLoginClick"
-                android:text="New user? Register Now"
+                android:text="New login? Register Now"
                 android:textAlignment="center"
                 android:textColor="@color/themeColor"
                 android:textSize="17sp"

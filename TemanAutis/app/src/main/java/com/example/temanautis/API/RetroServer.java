@@ -5,7 +5,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
     private static final String baseurl = "http://192.168.43.141:8000/api/";
-
     private static Retrofit retro;
 
     public static Retrofit konekRetrofit(){
