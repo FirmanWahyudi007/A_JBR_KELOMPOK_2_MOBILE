@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.temanautis.Model.DataModel;
 import com.example.temanautis.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,7 +44,12 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
             holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel(), Html.FROM_HTML_MODE_LEGACY));
         } else
             holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel()));
-
+        String url = "http://192.168.43.141:8000/images/"+dm.getSampul();
+        Picasso.get()
+                .load(url)
+                .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
+                .into(holder.Sampul);
     }
 
     @Override
