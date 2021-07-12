@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
+            android:visibility="gone"
             android:textSize="16sp"/>
 
         <TextView
@@ -38,10 +39,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="isi"
-            android:textSize="20sp"
+            android:textSize="11sp"
             android:layout_marginLeft="160dp"
             android:layout_below="@+id/tv_judul"
-            android:maxLines="2"
+            android:maxLines="10"
             />
 
     </RelativeLayout>
