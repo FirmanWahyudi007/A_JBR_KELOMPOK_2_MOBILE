@@ -44,8 +44,14 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
             holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel(), Html.FROM_HTML_MODE_LEGACY));
         } else
             holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel()));
+<<<<<<< Updated upstream
         String url = "http://192.168.1.9:8000/images/"+dm.getSampul();
         Picasso.get()
+=======
+        String url = "http://192.168.43.141:8000/images/"+dm.getSampul();
+        Picasso
+                .get()
+>>>>>>> Stashed changes
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
