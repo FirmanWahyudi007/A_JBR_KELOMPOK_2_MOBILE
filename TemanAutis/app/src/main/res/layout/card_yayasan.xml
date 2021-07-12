@@ -6,7 +6,7 @@
     android:outlineAmbientShadowColor="@color/black"
     app:cardCornerRadius="4dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -15,41 +15,50 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:id="@+id/ys_dokumentasi"
             android:layout_marginRight="8dp"
             android:src="@drawable/ic_launcher_foreground"/>
         <TextView
             android:id="@+id/ys_id"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/ys_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Judul Artikel"
+            android:text="Nama Yayasan"
+            android:layout_below="@+id/ys_id"
+            android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:layout_marginLeft="160dp"
             />
 
         <TextView
             android:id="@+id/ys_nohp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="isi"
-            android:textSize="18sp"
+            android:text="no hp"
+            android:layout_marginLeft="150dp"
+            android:layout_below="@+id/ys_nama"
+            android:textSize="20sp"
             android:maxLines="2"
             />
         <TextView
             android:id="@+id/ys_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="isi"
-            android:textSize="18sp"
+            android:layout_below="@id/ys_nohp"
+            android:layout_marginLeft="150dp"
+            android:text="alamat"
+            android:textSize="20sp"
             android:maxLines="2"
             />
 
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

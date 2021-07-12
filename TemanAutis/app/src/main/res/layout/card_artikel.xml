@@ -2,31 +2,35 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="6dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:id="@+id/sampul"
             android:layout_marginRight="8dp"
             android:src="@drawable/ic_launcher_foreground"/>
         <TextView
             android:id="@+id/tv_id"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/tv_judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Judul Artikel"
+            android:layout_below="@+id/tv_id"
+            android:layout_marginLeft="160dp"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -34,9 +38,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="isi"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:layout_marginLeft="160dp"
+            android:layout_below="@+id/tv_judul"
             android:maxLines="2"
             />
 
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>
