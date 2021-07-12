@@ -14,8 +14,9 @@ import com.example.temanautis.Model.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TabActivity extends AppCompatActivity {
-BottomNavigationView navigationView;
-SessionManager sessionManager;
+    BottomNavigationView navigationView;
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ SessionManager sessionManager;
         if (sessionManager.isLoggedIn() == false){
             moveToLogin();
         }
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         navigationView = findViewById(R.id.bottom_navigation);
@@ -45,7 +47,7 @@ SessionManager sessionManager;
                     case R.id.nav_profile:
                         fragment = new Fragment3();
                         break;
-            }
+                }
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
                 return true;

@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.example.temanautis.API.APIRequestData;
 import com.example.temanautis.API.RetroServer;
 import com.example.temanautis.Model.Login;
+import com.example.temanautis.Model.LoginData;
+import com.example.temanautis.Model.SessionManager;
 import com.google.android.material.textfield.TextInputLayout;
 
 import retrofit2.Call;
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     TextInputLayout etEmail, etPassword;
     String Email, Password;
     APIRequestData apiInterface;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
                 if(response.isSuccessful()){
+                    sessionManager = new SessionManager(LoginActivity.this);
+                    LoginData loginData = response.body().getLoginData();
+                    sessionManager.createLoginSession(loginData);
+
                     startActivity(new Intent(LoginActivity.this, TabActivity.class));
                     finish();
                 }else {
@@ -70,11 +77,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void login(String email, String password){
-
-    }
-
-
 
 }
