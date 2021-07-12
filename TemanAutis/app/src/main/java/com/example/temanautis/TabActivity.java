@@ -4,19 +4,26 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.temanautis.Model.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TabActivity extends AppCompatActivity {
 BottomNavigationView navigationView;
+SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
+        sessionManager = new SessionManager(TabActivity.this);
+        if (sessionManager.isLoggedIn() == false){
+            moveToLogin();
+        }
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         navigationView = findViewById(R.id.bottom_navigation);
@@ -45,5 +52,11 @@ BottomNavigationView navigationView;
             }
         });
 
+    }
+    private void moveToLogin(){
+        Intent intent = new Intent(TabActivity.this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+        finish();
     }
 }
