@@ -24,10 +24,10 @@ public class Fragment3 extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     TextView etName;
     String name;
     SessionManager sessionManager;
+    Button logout;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -73,8 +73,19 @@ public class Fragment3 extends Fragment {
         etName = view.findViewById(R.id.etMainName);
         name = (String) sessionManager.getUserDetail().get(SessionManager.NAME);
         etName.setText(name);
-        return view;
+        logout = (Button) view.findViewById(R.id.LogOut);
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
+        return view;
     }
 
+    private void logout(){
+        sessionManager.logoutSession();
+        startActivity(new Intent(getActivity(), LoginActivity.class));
+    }
 }

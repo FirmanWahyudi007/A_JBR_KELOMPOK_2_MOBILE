@@ -47,4 +47,5 @@ public class SessionManager {
     public boolean isLoggedIn(){
         return sharedPreferences.getBoolean(IS_LOGGED_IN, false);
     }
+
 }
