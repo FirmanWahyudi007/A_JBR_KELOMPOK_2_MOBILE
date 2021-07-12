@@ -14,6 +14,7 @@
         android:layout_marginTop="158dp">
 
         <Button
+            android:id="@+id/LogOut"
             android:layout_width="256dp"
             android:layout_height="49dp"
             android:background="@drawable/btn"
@@ -21,6 +22,17 @@
             android:layout_marginLeft="78dp"
             android:layout_marginRight="78dp"
             android:text="LOGOUT"/>
+        <TextView
+            android:id="@+id/etMainName"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:text="Name"
+            />
         <Button
             android:layout_width="327dp"
             android:layout_height="45dp"
