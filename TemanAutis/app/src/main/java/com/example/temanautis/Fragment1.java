@@ -104,6 +104,14 @@ public class Fragment1 extends Fragment {
                 startActivity(intent);
             }
         });
+        Button donasi = (Button) rootview.findViewById(R.id.donasi);
+        donasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Donasi.class);
+                startActivity(intent);
+            }
+        });
         return rootview;
     }
     private void setupSlider() {
