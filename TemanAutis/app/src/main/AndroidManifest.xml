@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TemanAutis"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Yayasan"></activity>
+        <activity android:name=".DetailArtikel"></activity>
+        <activity android:name=".Yayasan" />
         <activity android:name=".Artikel" />
         <activity android:name=".TabActivity" />
         <activity android:name=".RegisterActivity" />

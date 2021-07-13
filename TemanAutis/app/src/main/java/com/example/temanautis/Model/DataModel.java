@@ -3,7 +3,7 @@ package com.example.temanautis.Model;
 
 public class DataModel {
     private int id;
-    private String judul_artikel, isi_artikel, sampul;
+    private String judul_artikel, isi_artikel, sampul, tanggal;
 
     public int getId() {
         return id;
@@ -11,6 +11,14 @@ public class DataModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
     }
 
     public String getJudul_artikel() {

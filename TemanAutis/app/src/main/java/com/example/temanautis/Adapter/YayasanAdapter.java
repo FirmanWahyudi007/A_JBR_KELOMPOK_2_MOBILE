@@ -40,7 +40,7 @@ public class YayasanAdapter extends RecyclerView.Adapter<YayasanAdapter.HolderDa
         holder.ys_nama.setText(ym.getNama_yayasan());
         holder.ys_alamat.setText(ym.getAlamat());
         holder.ys_nohp.setText(ym.getNo_telp());
-        String url = "http://192.168.1.9:8000/images/"+ym.getDokumentasi();
+        String url = "http://192.168.43.142:8000/images/"+ym.getDokumentasi();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)
