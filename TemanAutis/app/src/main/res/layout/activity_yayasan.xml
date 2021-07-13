@@ -23,15 +23,16 @@
                 layout="@layout/my_toolbar" />
 
         </com.google.android.material.appbar.AppBarLayout>
-        <TextView
-            android:id="@+id/outout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Hasil Pencarian"
-            android:textSize="15sp"
-            android:textStyle="bold" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/outout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_below="@id/linear3"
+        android:text="Hasil Pencarian"
+        android:textSize="15sp"
+        android:textStyle="bold" />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="119dp"
