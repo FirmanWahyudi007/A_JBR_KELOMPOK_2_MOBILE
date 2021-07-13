@@ -2,7 +2,7 @@ package com.example.temanautis.Model;
 
 public class DonasiModel {
     private int id;
-    private String nama_donasi, yayasan, keterangan, banner;
+    private String nama_donasi, yayasan, keterangan, banner, tanggal;
 
     public int getId() {
         return id;
@@ -42,5 +42,13 @@ public class DonasiModel {
 
     public void setYayasan(String yayasan) {
         this.yayasan = yayasan;
+    }
+
+    public String getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
     }
 }
