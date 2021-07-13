@@ -62,7 +62,7 @@ public class Fragment2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_2, container, false);
-        Button donasi = (Button) view.findViewById(R.id.donasi);
+        Button donasi = (Button) view.findViewById(R.id.donasi1);
         donasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -43,6 +43,7 @@
             android:layout_marginRight="78dp"
             android:layout_marginLeft="78dp"
             android:text="BERDONASI"
+            android:id="@+id/donasi1"
             android:textColor="@color/black"
             android:textSize="18dp"
             android:textAlignment="center"
