@@ -41,34 +41,9 @@ public class Artikel extends AppCompatActivity {
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         artikelData();
-    Toolbar toolbar = findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-    Hasil = findViewById(R.id.outout);
+
 }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        //Memanggil/Memasang menu item pada toolbar dari layout menu_bar.xml
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        final SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Hasil.setText("Hasil Pencarian: " + query);
-                Toast.makeText(getApplicationContext(), query, Toast.LENGTH_SHORT).show();
 
-                searchView.clearFocus();
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return false;
-            }
-        });
-        return true;
-    }
 
     public void artikelData(){
         APIRequestData ardData = RetroServer.konekRetrofit().create(APIRequestData.class);
