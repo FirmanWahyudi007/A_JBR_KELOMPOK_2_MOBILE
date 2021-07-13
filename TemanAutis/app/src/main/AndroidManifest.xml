@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TemanAutis"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Donasi"></activity>
+        <activity android:name=".Tentang"></activity>
+        <activity android:name=".Donasi" />
         <activity android:name=".DetailArtikel" />
         <activity android:name=".Yayasan" />
         <activity android:name=".Artikel" />
