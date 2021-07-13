@@ -77,7 +77,7 @@
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:background="@drawable/btn_donasi"
-                android:id="@+id/donasi"/>
+                android:id="@+id/btn_donasi"/>
 
             <Button
                 android:layout_width="140dp"

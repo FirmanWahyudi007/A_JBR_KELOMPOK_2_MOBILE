@@ -104,8 +104,8 @@ public class Fragment1 extends Fragment {
                 startActivity(intent);
             }
         });
-        Button donasi = (Button) rootview.findViewById(R.id.donasi);
-        donasi.setOnClickListener(new View.OnClickListener() {
+        Button donasip = (Button) rootview.findViewById(R.id.btn_donasi);
+        donasip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getApplicationContext(), Donasi.class);
