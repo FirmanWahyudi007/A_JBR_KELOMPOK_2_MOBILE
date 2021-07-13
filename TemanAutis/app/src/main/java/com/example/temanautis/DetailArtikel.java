@@ -39,7 +39,7 @@ public class DetailArtikel extends AppCompatActivity {
             isi.setText(Html.fromHtml(dm.getIsi_artikel(), Html.FROM_HTML_MODE_LEGACY));
         } else
             isi.setText(Html.fromHtml(dm.getIsi_artikel()));
-        String url = "http://192.168.43.142:8000/images/"+dm.getSampul();
+        String url = "http://192.168.45.184:8000/images/"+dm.getSampul();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)

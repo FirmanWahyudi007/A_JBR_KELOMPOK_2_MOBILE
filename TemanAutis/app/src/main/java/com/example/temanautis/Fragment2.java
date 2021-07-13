@@ -66,7 +66,7 @@ public class Fragment2 extends Fragment {
         donasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), Donasi.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(), DaftarDonasi.class);
                 startActivity(intent);
             }
         });
