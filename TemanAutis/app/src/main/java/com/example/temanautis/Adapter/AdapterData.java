@@ -50,7 +50,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
             holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel(), Html.FROM_HTML_MODE_LEGACY));
         } else
             holder.tvIsi.setText(Html.fromHtml(dm.getIsi_artikel()));
-        String url = "http://10.212.109.8:8000/images/"+dm.getSampul();
+        String url = "http://192.168.1.9:8000/images/"+dm.getSampul();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)

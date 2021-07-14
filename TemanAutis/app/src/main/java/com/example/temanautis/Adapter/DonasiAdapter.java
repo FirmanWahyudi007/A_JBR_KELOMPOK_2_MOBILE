@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.temanautis.Donasi;
@@ -30,18 +31,18 @@ public class DonasiAdapter extends RecyclerView.Adapter<DonasiAdapter.HolderData
     @Override
     public DonasiAdapter.HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_donasi, parent, false);
-        DonasiAdapter.HolderData holder = new DonasiAdapter.HolderData(layout);
+        HolderData holder = new HolderData(layout);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DonasiAdapter.HolderData holder, int position) {
+    public void onBindViewHolder(@NonNull HolderData holder, int position) {
         DonasiModel ym = listDonasi.get(position);
         holder.yd_id.setText(String.valueOf(ym.getId()));
-        holder.yd_nama.setText(ym.getNama_donasi());
-        holder.yd_yayasan.setText(ym.getYayasan());
+        holder.yd_nama.setText(ym.getNamaDonasi());
+        holder.yd_yayasan.setText(ym.getNamaYayasan());
         holder.yd_keterangan.setText(ym.getKeterangan());
-        String url = "http://192.168.45.184:8000/images/"+ym.getBanner();
+        String url = "http://192.168.1.9:8000/images/"+ym.getBanner();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)
@@ -57,13 +58,15 @@ public class DonasiAdapter extends RecyclerView.Adapter<DonasiAdapter.HolderData
     public class HolderData extends RecyclerView.ViewHolder {
         TextView yd_nama, yd_yayasan, yd_keterangan,yd_id;
         ImageView yd_banner;
+        CardView List;
         public HolderData(@NonNull View itemView) {
             super(itemView);
-            yd_id = itemView.findViewById(R.id.yd_id);
-            yd_nama = itemView.findViewById(R.id.yd_nama);
-            yd_yayasan = itemView.findViewById(R.id.yd_yayasan);
-            yd_keterangan = itemView.findViewById(R.id.yd_keterangan);
+            yd_id = itemView.findViewById(R.id.tv_idDonasi);
+            yd_nama = itemView.findViewById(R.id.tv_penermiaDonasi);
+            yd_yayasan = itemView.findViewById(R.id.tv_yayasanDonasi);
+            yd_keterangan = itemView.findViewById(R.id.tv_keteranganDonasi);
             yd_banner = itemView.findViewById(R.id.yd_banner);
+            List = itemView.findViewById(R.id.card_donasi);
         }
     }
 }

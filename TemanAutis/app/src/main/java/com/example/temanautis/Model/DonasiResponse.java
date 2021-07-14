@@ -1,33 +1,40 @@
 package com.example.temanautis.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class DonasiResponse {
+    @SerializedName("code")
     private int code;
-    private String message;
+
+    @SerializedName("data")
     private List<DonasiModel> data;
 
-    public int getCode() {
-        return code;
-    }
+    @SerializedName("message")
+    private String message;
 
-    public void setCode(int code) {
+    public void setCode(int code){
         this.code = code;
     }
 
-    public String getMessage() {
-        return message;
+    public int getCode(){
+        return code;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setData(List<DonasiModel> data){
+        this.data = data;
     }
 
-    public List<DonasiModel> getData() {
+    public List<DonasiModel> getData(){
         return data;
     }
 
-    public void setData(List<DonasiModel> data) {
-        this.data = data;
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+    public String getMessage(){
+        return message;
     }
 }

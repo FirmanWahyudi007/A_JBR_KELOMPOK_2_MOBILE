@@ -18,7 +18,7 @@ public interface APIRequestData {
 
     @GET("yayasan")
     Call<YayasanResponse> ardYayasanData();
-    @GET("yayasan")
+    @GET("donasi")
     Call<DonasiResponse> ardDonasiData();
 
     @Headers({"Accept: application/json"})

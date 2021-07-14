@@ -45,7 +45,7 @@ public class DetailDonasi extends AppCompatActivity {
         String data = getIntent().getStringExtra("extra");
         Gson gson = new Gson();
         dm = gson.fromJson(data, DonasiModel.class);
-        nama.setText(dm.getNama_donasi());
+        nama.setText(dm.getNamaDonasi());
         yayasan.setText(dm.getYayasan());
         tanggal.setText(dm.getTanggal());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
