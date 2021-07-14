@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:text="Berkomunikasi"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_title"
+            android:textSize="40sp"
+            android:fontFamily="@font/purple_purse"
             android:textStyle="bold" />
 
         <TextView
@@ -30,11 +31,12 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
+            android:fontFamily="@font/roboto_slab_bold"
             android:text="Anda Dapat Belajar Berkomunikasi Dengan Teman-Teman Autis"
             android:textAlignment="center"
             android:autoSizeMinTextSize="20dp"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_desc"
+            android:textSize="20sp"
             android:gravity="center_horizontal" />
 
     </LinearLayout>
