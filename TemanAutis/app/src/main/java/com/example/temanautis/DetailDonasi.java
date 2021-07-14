@@ -46,13 +46,10 @@ public class DetailDonasi extends AppCompatActivity {
         Gson gson = new Gson();
         dm = gson.fromJson(data, DonasiModel.class);
         nama.setText(dm.getNamaDonasi());
-        yayasan.setText(dm.getYayasan());
+        yayasan.setText(dm.getNamaYayasan());
         tanggal.setText(dm.getTanggal());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            keterangan.setText(Html.fromHtml(dm.getKeterangan(), Html.FROM_HTML_MODE_LEGACY));
-        } else
-            keterangan.setText(Html.fromHtml(dm.getKeterangan()));
-        String url = "http://192.168.45.184:8000/images/"+dm.getBanner();
+        keterangan.setText(dm.getKeterangan());
+        String url = "http://192.168.1.9:8000/images/"+dm.getBanner();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)

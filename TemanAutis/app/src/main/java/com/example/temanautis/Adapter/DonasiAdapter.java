@@ -1,6 +1,7 @@
 package com.example.temanautis.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.temanautis.DetailArtikel;
+import com.example.temanautis.DetailDonasi;
 import com.example.temanautis.Donasi;
+import com.example.temanautis.Model.DataModel;
 import com.example.temanautis.Model.DonasiModel;
 import com.example.temanautis.Model.YayasanModel;
 import com.example.temanautis.R;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -29,7 +34,7 @@ public class DonasiAdapter extends RecyclerView.Adapter<DonasiAdapter.HolderData
 
     @NonNull
     @Override
-    public DonasiAdapter.HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_donasi, parent, false);
         HolderData holder = new HolderData(layout);
         return holder;
@@ -48,6 +53,16 @@ public class DonasiAdapter extends RecyclerView.Adapter<DonasiAdapter.HolderData
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.yd_banner);
+        holder.List.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ctx, DetailDonasi.class );
+                Gson gson = new Gson();
+                String str = gson.toJson(listDonasi.get(position), DonasiModel.class);
+                intent.putExtra("extra", str);
+                ctx.startActivity(intent);
+            }
+        });
     }
 
     @Override
