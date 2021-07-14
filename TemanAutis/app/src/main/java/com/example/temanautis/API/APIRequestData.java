@@ -4,7 +4,9 @@ import com.example.temanautis.Model.DonasiResponse;
 import com.example.temanautis.Model.Login;
 import com.example.temanautis.Model.Register;
 import com.example.temanautis.Model.ResponseModel;
+import com.example.temanautis.Model.YayasanModel;
 import com.example.temanautis.Model.YayasanResponse;
+import com.example.temanautis.Yayasan;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -36,5 +38,16 @@ public interface APIRequestData {
             @Query("email") String email,
             @Query("password") String password,
             @Query("password_confirmation") String password_confirmation
+    );
+
+    @Headers({"Accept: application/json"})
+    @GET("cari")
+    Call<ResponseModel> search(
+            @Query("query") String query
+    );
+    @Headers({"Accept: application/json"})
+    @GET("cari/yayasan")
+    Call<YayasanResponse> searchYayasan(
+            @Query("query") String query
     );
 }

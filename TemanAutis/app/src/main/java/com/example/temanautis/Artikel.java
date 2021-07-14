@@ -32,15 +32,49 @@ public class Artikel extends AppCompatActivity {
     private RecyclerView.LayoutManager lmData;
     private List<DataModel> lisData = new ArrayList<>();
     private TextView Hasil;
+    private AdapterData adapterData;
+    private SearchView searchView;
+    String Judul_Artikel;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artikel);
         rvData = findViewById(R.id.rv_artikel);
+        searchView = findViewById(R.id.search);
+        recyclerView = findViewById(R.id.rv_artikel);
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         artikelData();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                APIRequestData apiRequestData = RetroServer.konekRetrofit().create(APIRequestData.class);
+                Call<ResponseModel> call = apiRequestData.search(newText);
+                call.enqueue(new Callback<ResponseModel>() {
+                    @Override
+                    public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                        lisData = response.body().getData();
+                        adData = new AdapterData(Artikel.this, lisData);
+                        recyclerView.setAdapter(adData);
+                        adData.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseModel> call, Throwable t) {
+
+                    }
+                });
+                return false;
+            }
+        });
 
 }
 

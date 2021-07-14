@@ -15,7 +15,9 @@ import android.widget.Toast;
 
 import com.example.temanautis.API.APIRequestData;
 import com.example.temanautis.API.RetroServer;
+import com.example.temanautis.Adapter.AdapterData;
 import com.example.temanautis.Adapter.YayasanAdapter;
+import com.example.temanautis.Model.ResponseModel;
 import com.example.temanautis.Model.YayasanModel;
 import com.example.temanautis.Model.YayasanResponse;
 
@@ -32,15 +34,48 @@ public class Yayasan extends AppCompatActivity {
     private RecyclerView.LayoutManager rvLm;
     private List<YayasanModel> listData = new ArrayList<>();
     private TextView Hasil;
+    private SearchView searchView;
+    private AdapterData adapterData;
+    String Judul_Artikel;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yayasan);
         rvData = findViewById(R.id.rv_yayasan);
+        searchView = findViewById(R.id.search);
+        recyclerView = findViewById(R.id.rv_yayasan);
         rvLm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(rvLm);
         yayasanData();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                APIRequestData apiRequestData = RetroServer.konekRetrofit().create(APIRequestData.class);
+                Call<YayasanResponse> call = apiRequestData.searchYayasan(newText);
+                call.enqueue(new Callback<YayasanResponse>() {
+                    @Override
+                    public void onResponse(Call<YayasanResponse> call, Response<YayasanResponse> response) {
+                        listData = response.body().getData();
+                        adData = new YayasanAdapter(Yayasan.this, listData);
+                        recyclerView.setAdapter(adData);
+                        adData.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onFailure(Call<YayasanResponse> call, Throwable t) {
+
+                    }
+                });
+                return false;
+            }
+        });
     }
 
 

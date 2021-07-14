@@ -48,9 +48,18 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:layout_below="@+id/image1"
+        android:paddingStart="10dp"
+        android:searchIcon="@drawable/ic_baseline_search_24"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_yayasan"
-        android:layout_below="@+id/image1"
+        android:layout_below="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/card_yayasan"
