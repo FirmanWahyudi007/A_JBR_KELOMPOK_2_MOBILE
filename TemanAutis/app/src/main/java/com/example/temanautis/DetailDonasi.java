@@ -30,7 +30,7 @@ public class DetailDonasi extends AppCompatActivity {
         nama = findViewById(R.id.detail_nama);
         keterangan = findViewById(R.id.detail_keterangan);
         yayasan = findViewById(R.id.detail_yayasan);
-        tanggal = findViewById(R.id.dt_tanggal);
+        tanggal = findViewById(R.id.detail_tanggal);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
