@@ -127,7 +127,8 @@
         android:textColor="@color/design_default_color_primary_dark"
         android:layout_marginTop="546dp"
         android:layout_marginLeft="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:id="@+id/link"/>
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
