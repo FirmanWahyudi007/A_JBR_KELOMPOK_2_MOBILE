@@ -58,6 +58,8 @@
         android:searchIcon="@drawable/ic_baseline_search_24"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/rv_yayasan"
         android:layout_below="@+id/search"
         android:layout_width="match_parent"
