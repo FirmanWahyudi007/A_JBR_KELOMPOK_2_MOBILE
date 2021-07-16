@@ -41,6 +41,8 @@
         android:id="@+id/rv_donasi"
         android:layout_width="match_parent"
         android:layout_below="@+id/image1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_height="match_parent"
         tools:listitem="@layout/card_donasi"/>
 </RelativeLayout>

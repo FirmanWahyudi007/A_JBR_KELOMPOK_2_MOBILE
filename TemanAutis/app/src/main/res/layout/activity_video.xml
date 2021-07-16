@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg7"
     tools:context=".Video">
     <ImageView
         android:layout_width="match_parent"
@@ -38,8 +39,8 @@
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lis_acara"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_below="@+id/image1"
         android:layout_height="match_parent"
