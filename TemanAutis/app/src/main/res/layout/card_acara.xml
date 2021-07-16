@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:padding="6dp"
+        android:background="@drawable/bg_list"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:id="@+id/gambar"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_launcher_foreground"/>
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_below="@+id/gambar"
+            android:visibility="gone"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Acara"
+            android:layout_below="@+id/gambar"
+            android:layout_marginLeft="30dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_isi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="isi"
+            android:textSize="11sp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/judul"
+            android:maxLines="10"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
