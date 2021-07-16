@@ -51,7 +51,8 @@ public class Donasi extends AppCompatActivity {
             @Override
             public void onResponse(Call<DonateResponse> call, Response<DonateResponse> response) {
                 if(response.isSuccessful()){
-                    startActivity(new Intent(Donasi.this, TabActivity.class));
+                    startActivity(new Intent(Donasi.this, Transfer.class));
+                    Log.d("onResponse", "onResponse: " + response.message());
                     finish();
                 }else {
                     Toast.makeText(Donasi.this, "Gagal", Toast.LENGTH_SHORT).show();
