@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,6 +23,7 @@ public class DetailDonasi extends AppCompatActivity {
     Button button;
     ImageView banner;
     TextView nama,tanggal,yayasan, keterangan;
+    private String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,14 +34,16 @@ public class DetailDonasi extends AppCompatActivity {
         keterangan = findViewById(R.id.detail_keterangan);
         yayasan = findViewById(R.id.detail_yayasan);
         tanggal = findViewById(R.id.detail_tanggal);
+        getDonasi();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DetailDonasi.this, Donasi.class);
+                intent.putExtra("extra", id);
                 startActivity(intent);
             }
         });
-        getDonasi();
+
     }
 
     private void getDonasi() {
@@ -49,6 +54,7 @@ public class DetailDonasi extends AppCompatActivity {
         yayasan.setText(dm.getNamaYayasan());
         tanggal.setText(dm.getTanggal());
         keterangan.setText(dm.getKeterangan());
+        id = String.valueOf(dm.getId());
         String url = "http://192.168.43.142:8000/images/"+dm.getBanner();
         Picasso.get()
                 .load(url)
