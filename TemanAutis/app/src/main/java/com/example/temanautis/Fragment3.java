@@ -81,6 +81,14 @@ public class Fragment3 extends Fragment {
                 logout();
             }
         });
+        Button tentang = (Button) view.findViewById(R.id.tentang);
+        tentang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Tentang.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

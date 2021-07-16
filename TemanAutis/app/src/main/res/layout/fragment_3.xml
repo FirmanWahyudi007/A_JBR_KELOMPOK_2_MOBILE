@@ -49,7 +49,8 @@
         android:layout_marginTop="194dp"
         android:layout_marginRight="42dp"
         android:layout_marginLeft="42dp"
-            android:text="TENTANG"/>
+            android:text="TENTANG"
+            android:id="@+id/tentang"/>
 
     </RelativeLayout>
     <de.hdodenhof.circleimageview.CircleImageView

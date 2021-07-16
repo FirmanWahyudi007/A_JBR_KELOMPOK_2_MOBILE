@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tentang">
+    tools:context=".Tentang"
+    android:background="#FFB932"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:gravity="center">
+    <ImageView
+        android:layout_width="135dp"
+        android:layout_height="177dp"
+        android:src="@drawable/logo_nama"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="392dp"
+        android:layout_marginTop="242dp"
+        android:gravity="center">
+    <ImageView
+        android:layout_width="329dp"
+        android:layout_height="392dp"
+        android:background="@drawable/bg9"
+        android:foregroundGravity="center"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teman Autis merupakan sistem informasi untuk penyandang autisme yang berbasis WEB dan Android untuk mempermudah anak-anak Autisme dalam mengembangkan dan menunjukan bakat mereka. Dan juga platform ini dapat mempermudah anak-anak Autisme untuk berkomunikasi. Di playform ini, anda dapat berkontribusi untuk membantu anak-anak penyandang autisme dengan berdonasi."
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginTop="291dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/rosarivo"></TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="V 1.0"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:fontFamily="@font/elsie"
+        android:textStyle="bold"
+        android:layout_marginTop="607dp"/>
+
+</RelativeLayout>
