@@ -47,7 +47,7 @@ public class DonasiAdapter extends RecyclerView.Adapter<DonasiAdapter.HolderData
         holder.yd_nama.setText(ym.getNamaDonasi());
         holder.yd_yayasan.setText(ym.getNamaYayasan());
         holder.yd_keterangan.setText(ym.getKeterangan());
-        String url = "http://192.168.43.142:8000/images/"+ym.getBanner();
+        String url = "http://192.168.1.6:8000/images/"+ym.getBanner();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)

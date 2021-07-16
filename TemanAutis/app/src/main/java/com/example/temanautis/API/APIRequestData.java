@@ -1,6 +1,7 @@
 package com.example.temanautis.API;
 
 import com.example.temanautis.Model.DonasiResponse;
+import com.example.temanautis.Model.DonateResponse;
 import com.example.temanautis.Model.ListDonateResponse;
 import com.example.temanautis.Model.Login;
 import com.example.temanautis.Model.Register;
@@ -55,4 +56,11 @@ public interface APIRequestData {
     Call<YayasanResponse> searchYayasan(
             @Query("query") String query
     );
+    @POST("donate")
+    Call<DonateResponse> Donate(
+            @Header("Authorization") String token,
+            @Query("donasi") int donasi,
+            @Query("nominal") int nominal,
+            @Query("metode") String metode,
+            @Query("keterangan") String keterangan);
 }
