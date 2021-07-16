@@ -14,13 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TemanAutis"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ListDonateActivity"></activity>
         <activity android:name=".Splash">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-        <activity android:name=".Transfer"></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Transfer" />
         <activity android:name=".DetailDonasi" />
         <activity android:name=".DaftarDonasi" />
         <activity android:name=".Tentang" />
@@ -31,9 +33,7 @@
         <activity android:name=".TabActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Slider">
-
-        </activity>
+        <activity android:name=".Slider"></activity>
         <activity android:name=".MainActivity" />
 
         <meta-data
