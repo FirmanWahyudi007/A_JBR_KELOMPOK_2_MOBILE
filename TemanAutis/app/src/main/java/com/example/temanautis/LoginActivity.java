@@ -59,10 +59,11 @@ public class LoginActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     sessionManager = new SessionManager(LoginActivity.this);
                     LoginData loginData = response.body().getLoginData();
-                    sessionManager.createLoginSession(loginData);
-
+                    String login = response.body().getToken();
+                    sessionManager.createLoginSession(loginData,login);
                     startActivity(new Intent(LoginActivity.this, TabActivity.class));
                     finish();
+                    Log.d("onResponse", "onResponse: " + login);
                 }else {
                     Toast.makeText(LoginActivity.this, "Gagal", Toast.LENGTH_SHORT).show();
                     Log.d("onResponse", "onResponse: " + response.message());

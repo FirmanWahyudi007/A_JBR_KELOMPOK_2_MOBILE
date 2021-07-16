@@ -74,7 +74,14 @@ public class Fragment3 extends Fragment {
         name = (String) sessionManager.getUserDetail().get(SessionManager.NAME);
         etName.setText(name);
         logout = (Button) view.findViewById(R.id.LogOut);
-
+        Button listDonate = (Button) view.findViewById(R.id.listDonate);
+        listDonate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), ListDonateActivity.class);
+                startActivity(intent);
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

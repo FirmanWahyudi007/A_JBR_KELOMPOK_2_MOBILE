@@ -49,7 +49,7 @@ public class DetailDonasi extends AppCompatActivity {
         yayasan.setText(dm.getNamaYayasan());
         tanggal.setText(dm.getTanggal());
         keterangan.setText(dm.getKeterangan());
-        String url = "http://192.168.1.9:8000/images/"+dm.getBanner();
+        String url = "http://192.168.43.142:8000/images/"+dm.getBanner();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)

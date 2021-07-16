@@ -50,6 +50,16 @@
         android:layout_marginRight="42dp"
         android:layout_marginLeft="42dp"
             android:text="TENTANG"/>
+        <Button
+            android:id="@+id/listDonate"
+            android:layout_width="327dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_1"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginLeft="42dp"
+            android:text="List Donate"/>
+
 
     </RelativeLayout>
     <de.hdodenhof.circleimageview.CircleImageView
