@@ -1,9 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFB932"
     tools:context=".Konfirmasi">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:id="@+id/image1"
+        android:src="@drawable/bg6"
+        android:foregroundGravity="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/alegreya_sc_bold"
+        android:gravity="center"
+        android:text="Konfirmasi Pembayaran"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/whiteTextColor"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputId"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+
+                <EditText
+                    android:id="@+id/editTextId"
+                    style="@style/modifiedEditText"
+                    android:hint="Id"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:backgroundTint="#ffd880"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputNominal"
+                android:layout_below="@+id/textInputId"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+
+                <EditText
+                    android:id="@+id/editTextNominal"
+                    style="@style/modifiedEditText"
+                    android:hint="Nominal"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:backgroundTint="#ffd880"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputMetode"
+                android:layout_below="@+id/textInputNominal"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+
+                <EditText
+                    android:id="@+id/editTextMetode"
+                    style="@style/modifiedEditText"
+                    android:hint="Metode"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:backgroundTint="#ffd880"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputKeterangan"
+                android:layout_below="@+id/textInputMetode"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+
+                <EditText
+                    android:id="@+id/editTextKeterangan"
+                    style="@style/modifiedEditText"
+                    android:layout_height="70dp"
+                    android:hint="Keterangan"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:backgroundTint="#ffd880"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Gambar"
+                android:background="@drawable/btn_1"
+                android:id="@+id/buttonChoose"
+                android:drawableRight="@android:drawable/ic_menu_gallery"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:id="@+id/imageView" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="256dp"
+        android:layout_height="49dp"
+        android:background="@drawable/btn_2"
+        android:layout_marginTop="650dp"
+        android:gravity="center"
+        android:layout_marginRight="78dp"
+        android:layout_marginLeft="78dp"
+        android:text="KIRIM"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        />
+</RelativeLayout>

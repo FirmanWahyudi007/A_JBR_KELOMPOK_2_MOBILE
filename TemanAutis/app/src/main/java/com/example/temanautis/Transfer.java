@@ -23,13 +23,11 @@ public class Transfer extends AppCompatActivity {
         mandiri.setMovementMethod(LinkMovementMethod.getInstance());
         TextView gopay = (TextView) findViewById(R.id.gopay);
         gopay.setMovementMethod(LinkMovementMethod.getInstance());
-        TextView link = (TextView) findViewById(R.id.link);
-        link.setMovementMethod(LinkMovementMethod.getInstance());
-        Button home2 = (Button) findViewById(R.id.home2);
+        Button home2 = (Button) findViewById(R.id.konfirmasi);
         home2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Transfer.this, TabActivity.class);
+                Intent intent = new Intent(Transfer.this, Konfirmasi.class);
                 startActivity(intent);
             }
         });

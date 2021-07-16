@@ -110,25 +110,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="440dp"
         android:layout_marginLeft="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Link Konfirmasi Pembayaran"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:fontFamily="@font/roboto_slab_bold"
-        android:layout_marginTop="525dp"
-        android:layout_marginLeft="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Http://www.siPenyaut.com"
-        android:textColor="@color/design_default_color_primary_dark"
-        android:layout_marginTop="546dp"
-        android:layout_marginLeft="20dp"
-        android:textStyle="bold"
-        android:id="@+id/link"/>
+
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -142,8 +124,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:id="@+id/home2"
-            android:text="HOME"
+            android:id="@+id/konfirmasi"
+            android:text="KONFIRMASI"
             android:background="@drawable/btn_2"
             android:textAllCaps="true" />
     </LinearLayout>
