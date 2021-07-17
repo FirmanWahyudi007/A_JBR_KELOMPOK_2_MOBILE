@@ -111,10 +111,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:scaleType="centerInside"
                 android:id="@+id/imageView" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <Button
+        android:id="@+id/kirimkonfirmasi"
         android:layout_width="256dp"
         android:layout_height="49dp"
         android:background="@drawable/btn_2"

@@ -70,10 +70,10 @@ public interface APIRequestData {
             @Query("keterangan") String keterangan);
 
     @Multipart
-    @PUT("uploadbutki")
+    @PUT("uploadbukti")
     Call<DonateResponse> Upload(
             @Header("Authorization") String token,
-            @Part("id") RequestBody id,
+            @Part("id") int id,
             @Part MultipartBody.Part file
     );
 }
