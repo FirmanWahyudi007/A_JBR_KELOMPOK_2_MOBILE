@@ -1,6 +1,7 @@
 package com.example.temanautis.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.temanautis.Konfirmasi;
 import com.example.temanautis.Model.ListDonateModel;
 import com.example.temanautis.R;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -41,6 +44,16 @@ public class ListDonateAdapter extends RecyclerView.Adapter<ListDonateAdapter.Ho
         holder.ld_id.setText(String.valueOf(LD.getId()));
         holder.nama_donasi.setText(LD.getNama_donasi());
         holder.tanggal.setText(LD.getTanggal());
+        holder.listDonate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ctx, Konfirmasi.class);
+                Gson gson = new Gson();
+                String str = gson.toJson(list.get(position), ListDonateModel.class);
+                intent.putExtra("extra",str);
+                ctx.startActivity(intent);
+            }
+        });
     }
 
     @Override
