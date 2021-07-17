@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -49,7 +50,7 @@ public class ListDonateAdapter extends RecyclerView.Adapter<ListDonateAdapter.Ho
 
     public class HolderData extends RecyclerView.ViewHolder {
         TextView ld_id,nama_donasi,tanggal;
-        CardView listDonate;
+        RelativeLayout listDonate;
         public HolderData(@NonNull View itemView) {
             super(itemView);
             ld_id = itemView.findViewById(R.id.ld_id);

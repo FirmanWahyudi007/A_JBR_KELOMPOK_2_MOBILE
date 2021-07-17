@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -73,7 +74,7 @@ public class DonasiAdapter extends RecyclerView.Adapter<DonasiAdapter.HolderData
     public class HolderData extends RecyclerView.ViewHolder {
         TextView yd_nama, yd_yayasan, yd_keterangan,yd_id;
         ImageView yd_banner;
-        CardView List;
+        RelativeLayout List;
         public HolderData(@NonNull View itemView) {
             super(itemView);
             yd_id = itemView.findViewById(R.id.tv_idDonasi);

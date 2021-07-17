@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -76,7 +77,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     public class HolderData extends RecyclerView.ViewHolder {
         TextView tvJudul, tvIsi, tvId;
         ImageView Sampul;
-        CardView List;
+        RelativeLayout List;
 
         public HolderData(@NonNull View itemView) {
             super(itemView);
