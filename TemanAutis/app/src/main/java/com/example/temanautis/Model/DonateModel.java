@@ -2,8 +2,19 @@ package com.example.temanautis.Model;
 
 public class DonateModel {
     private int id,donasi,users,nominal,konfirmasi;
-    private String keterangan,tanggal,metode_pembayaran;
+    private String keterangan,tanggal,metode_pembayaran,bukti_transfer;
 
+    public DonateModel(int id, int donasi, int users, int nominal, int konfirmasi, String keterangan, String tanggal, String metode_pembayaran, String bukti_transfer) {
+        this.id = id;
+        this.donasi = donasi;
+        this.users = users;
+        this.nominal = nominal;
+        this.konfirmasi = konfirmasi;
+        this.keterangan = keterangan;
+        this.tanggal = tanggal;
+        this.metode_pembayaran = metode_pembayaran;
+        this.bukti_transfer = bukti_transfer;
+    }
 
     public int getId() {
         return id;
@@ -67,5 +78,13 @@ public class DonateModel {
 
     public void setMetode_pembayaran(String metode_pembayaran) {
         this.metode_pembayaran = metode_pembayaran;
+    }
+
+    public String getBukti_transfer() {
+        return bukti_transfer;
+    }
+
+    public void setBukti_transfer(String bukti_transfer) {
+        this.bukti_transfer = bukti_transfer;
     }
 }

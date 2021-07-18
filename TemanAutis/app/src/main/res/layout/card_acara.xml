@@ -37,13 +37,23 @@
             />
 
         <TextView
-            android:id="@+id/tv_isi"
+            android:id="@+id/ac_tempat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="isi"
             android:textSize="11sp"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/judul"
+            android:maxLines="10"
+            />
+        <TextView
+            android:id="@+id/ac_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal"
+            android:textSize="11sp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/ac_tempat"
             android:maxLines="10"
             />
 

@@ -112,6 +112,14 @@ public class Fragment1 extends Fragment {
                 startActivity(intent);
             }
         });
+        Button acara = (Button) rootview.findViewById(R.id.btn_acara);
+        acara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Acara.class);
+                startActivity(intent);
+            }
+        });
         return rootview;
     }
     private void setupSlider() {

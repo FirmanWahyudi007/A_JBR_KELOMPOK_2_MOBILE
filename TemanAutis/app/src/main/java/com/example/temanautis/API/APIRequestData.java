@@ -1,11 +1,14 @@
 package com.example.temanautis.API;
 
+import com.example.temanautis.Model.AcaraResponse;
 import com.example.temanautis.Model.DonasiResponse;
+import com.example.temanautis.Model.DonateModel;
 import com.example.temanautis.Model.DonateResponse;
 import com.example.temanautis.Model.ListDonateResponse;
 import com.example.temanautis.Model.Login;
 import com.example.temanautis.Model.Register;
 import com.example.temanautis.Model.ResponseModel;
+import com.example.temanautis.Model.VideoResponse;
 import com.example.temanautis.Model.YayasanModel;
 import com.example.temanautis.Model.YayasanResponse;
 import com.example.temanautis.Yayasan;
@@ -28,8 +31,15 @@ public interface APIRequestData {
 
     @GET("yayasan")
     Call<YayasanResponse> ardYayasanData();
+
     @GET("donasi")
     Call<DonasiResponse> ardDonasiData();
+
+    @GET("acara")
+    Call<AcaraResponse> ardAcaraData();
+
+    @GET("video")
+    Call<VideoResponse> ardVideoData();
 
     @GET("listdonate")
     Call<ListDonateResponse> ardListDonateData(@Header("Authorization") String token);
@@ -68,12 +78,5 @@ public interface APIRequestData {
             @Query("nominal") int nominal,
             @Query("metode") String metode,
             @Query("keterangan") String keterangan);
-
-    @Multipart
-    @PUT("uploadbukti")
-    Call<DonateResponse> Upload(
-            @Header("Authorization") String token,
-            @Part("id") int id,
-            @Part MultipartBody.Part file
-    );
+    
 }
