@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TemanAutis"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Acara"></activity>
+        <activity android:name=".DetailVideo"></activity>
+        <activity android:name=".DetailAcara" />
+        <activity android:name=".Acara" />
         <activity android:name=".ListDonateActivity" />
         <activity android:name=".Splash">
             <intent-filter>
