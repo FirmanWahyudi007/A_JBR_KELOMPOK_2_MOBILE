@@ -1,17 +1,21 @@
 package com.example.temanautis.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.temanautis.DetailAcara;
 import com.example.temanautis.Model.AcaraModel;
 import com.example.temanautis.R;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -48,6 +52,16 @@ public class AcaraAdapter extends RecyclerView.Adapter<AcaraAdapter.HolderData> 
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.gambar);
+        holder.rl_ac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailAcara.class);
+                Gson gson = new Gson();
+                String string = gson.toJson(acaraModelList.get(position), AcaraModel.class);
+                intent.putExtra("Data", string);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,6 +72,7 @@ public class AcaraAdapter extends RecyclerView.Adapter<AcaraAdapter.HolderData> 
     public class HolderData extends RecyclerView.ViewHolder {
         ImageView gambar;
         TextView id,nama,tanggal,tempat;
+        RelativeLayout rl_ac;
         public HolderData(@NonNull View itemView) {
             super(itemView);
             gambar = itemView.findViewById(R.id.gambar);
@@ -65,6 +80,7 @@ public class AcaraAdapter extends RecyclerView.Adapter<AcaraAdapter.HolderData> 
             nama = itemView.findViewById(R.id.judul);
             tanggal = itemView.findViewById(R.id.ac_tanggal);
             tempat = itemView.findViewById(R.id.ac_tempat);
+            rl_ac = itemView.findViewById(R.id.ac_acara);
         }
     }
 }

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/ac_acara">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="320dp"
         android:padding="6dp"
         android:background="@drawable/bg_list"
         android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp">
+        android:layout_marginRight="0dp"
+        >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="190dp"

@@ -27,7 +27,7 @@ public class Transfer extends AppCompatActivity {
         home2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Transfer.this, Konfirmasi.class);
+                Intent intent = new Intent(Transfer.this, ListDonateActivity.class);
                 startActivity(intent);
             }
         });

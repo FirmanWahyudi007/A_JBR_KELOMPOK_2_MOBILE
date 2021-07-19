@@ -19,21 +19,29 @@
         android:fontFamily="@font/roboto_slab_bold"
         android:text="Judul Acara"
         android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:layout_below="@+id/sampulacara"
         android:layout_marginTop="18dp"
-        android:layout_marginLeft="37dp"
-
+        android:layout_marginStart="37dp"
         />
-    <ScrollView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/judul_acara"
-        android:layout_marginLeft="37dp">
+        android:id="@+id/tempat_acara"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="37dp"
+        android:text="Tempat"
+        android:textSize="15sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempat_acara"
+        android:layout_marginStart="37dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,15 +64,16 @@
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:background="#FFB932"
-        android:layout_marginTop="576dp"/>
+        android:layout_marginTop="576dp"
+        android:contentDescription="TODO" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tanggal"
+        android:id="@+id/tanggal_acara"
         android:layout_marginTop="590dp"
         android:text="Tanggal, Waktu"
         android:textColor="@color/white"
-        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
         android:textSize="18sp"
         android:textStyle="bold"
         android:fontFamily="@font/rosarivo"
@@ -78,12 +87,22 @@
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp">
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/kembali"
+            android:layout_width="181dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Kembali"
             android:background="@drawable/btn_2"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"/>
+        <Button
+            android:id="@+id/link"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Link"
+            android:background="@drawable/btn_1"
+            android:textAllCaps="true"
+            android:backgroundTint="@color/colorAccent"/>
     </LinearLayout>
 
 
