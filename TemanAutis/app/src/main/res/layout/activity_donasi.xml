@@ -12,7 +12,12 @@
         android:id="@+id/image1"
         android:src="@drawable/bg6"
         android:foregroundGravity="center"/>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextId"
+        android:text="id"
+        android:visibility="gone"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,9 +49,9 @@
         android:layout_marginTop="@dimen/loginViewsMargin">
 
         <EditText
-            android:id="@+id/editTextId"
+            android:id="@+id/NamaDonasi"
             style="@style/modifiedEditText"
-            android:hint="Id"
+            android:hint="Donasi"
             android:textColor="@color/black"
             android:inputType="textPersonName"
             android:maxLines="1"

@@ -21,7 +21,7 @@ import retrofit2.Response;
 
 public class Donasi extends AppCompatActivity {
     TextView id;
-    EditText nominal;
+    EditText nominal,nama;
     EditText metode;
     EditText keterangan;
     APIRequestData apiInterface;
@@ -30,12 +30,15 @@ public class Donasi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donasi);
+        nama = findViewById(R.id.NamaDonasi);
         id = findViewById(R.id.editTextId);
         nominal = findViewById(R.id.editTextNominal);
         metode = findViewById(R.id.editTextMetode);
         keterangan = findViewById(R.id.editTextKeterangan);
         String data = getIntent().getStringExtra("extra");
         id.setText(data);
+        String donasi = getIntent().getStringExtra("nama");
+        nama.setText(donasi);
         SessionManager sessionManager = new SessionManager(getBaseContext());
         token = (String) sessionManager.getUserDetail().get(SessionManager.TOKEN);
     }

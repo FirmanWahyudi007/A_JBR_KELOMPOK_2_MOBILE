@@ -64,14 +64,10 @@ public class DetailAcara extends AppCompatActivity {
                 public void onClick(View v) {
 
                     String url = am.getLink_acara();
-                    if (url == "kosong") {
-                        Toast.makeText(DetailAcara.this, "Tidak Ada Link", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
-
-                    }
+                    Toast.makeText(DetailAcara.this, "Tidak Ada Link", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
                 }
             });
         }

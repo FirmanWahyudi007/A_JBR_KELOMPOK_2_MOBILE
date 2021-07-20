@@ -99,7 +99,7 @@
             android:layout_width="181dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Link"
+            android:text="Link/Maps"
             android:background="@drawable/btn_1"
             android:textAllCaps="true"
             android:backgroundTint="@color/colorAccent"/>

@@ -23,7 +23,7 @@ public class DetailDonasi extends AppCompatActivity {
     Button button;
     ImageView banner;
     TextView nama,tanggal,yayasan, keterangan;
-    private String id;
+    private String id,donasi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,7 @@ public class DetailDonasi extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(DetailDonasi.this, Donasi.class);
                 intent.putExtra("extra", id);
+                intent.putExtra("nama", donasi);
                 startActivity(intent);
             }
         });
@@ -55,6 +56,7 @@ public class DetailDonasi extends AppCompatActivity {
         tanggal.setText(dm.getTanggal());
         keterangan.setText(dm.getKeterangan());
         id = String.valueOf(dm.getId());
+        donasi = dm.getNamaDonasi();
         String url = "http://192.168.43.142:8000/images/"+dm.getBanner();
         Picasso.get()
                 .load(url)
