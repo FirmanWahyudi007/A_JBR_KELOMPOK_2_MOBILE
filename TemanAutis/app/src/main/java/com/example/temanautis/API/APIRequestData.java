@@ -78,5 +78,14 @@ public interface APIRequestData {
             @Query("nominal") int nominal,
             @Query("metode") String metode,
             @Query("keterangan") String keterangan);
+    @Headers({"Accept: application/json"})
+    @Multipart
+    @POST("uploadbukti")
+    Call<DonateResponse> Upload(
+            @Query("_method") String method,
+            @Header("Authorization") String token,
+            @Part("id") RequestBody id,
+            @Part MultipartBody.Part bukti_transfer
+    );
     
 }

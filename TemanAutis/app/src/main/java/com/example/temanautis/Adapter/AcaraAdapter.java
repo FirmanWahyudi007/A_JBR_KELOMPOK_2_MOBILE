@@ -46,7 +46,7 @@ public class AcaraAdapter extends RecyclerView.Adapter<AcaraAdapter.HolderData> 
         holder.nama.setText(am.getNama_acara());
         holder.tempat.setText(am.getTempat());
         holder.tanggal.setText(am.getTanggal_acara());
-        String url = "http://192.168.43.142:8000/images/thumbnail/"+am.getThumbnail();
+        String url = "http://192.168.1.6:8000/images/thumbnail/"+am.getThumbnail();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)
