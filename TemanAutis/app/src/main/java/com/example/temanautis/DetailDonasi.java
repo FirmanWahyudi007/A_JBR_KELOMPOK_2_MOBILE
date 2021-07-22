@@ -57,7 +57,7 @@ public class DetailDonasi extends AppCompatActivity {
         keterangan.setText(dm.getKeterangan());
         id = String.valueOf(dm.getId());
         donasi = dm.getNamaDonasi();
-        String url = "http://192.168.1.6:8000/images/"+dm.getBanner();
+        String url = "https://wsjti.id/sipenyaut/public/images/"+dm.getBanner();
         Picasso.get()
                 .load(url)
                 .placeholder(R.drawable.ic_launcher_background)
