@@ -35,7 +35,7 @@
             android:text="Nama Yayasan"
             android:layout_below="@+id/ys_id"
             android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginLeft="180dp"
             />
@@ -47,7 +47,7 @@
             android:text="no hp"
             android:layout_marginLeft="180dp"
             android:layout_below="@+id/ys_nama"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:maxLines="2"
             />
         <TextView
@@ -57,7 +57,7 @@
             android:layout_below="@id/ys_nohp"
             android:layout_marginLeft="180dp"
             android:text="alamat"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:maxLines="2"
             />
 
