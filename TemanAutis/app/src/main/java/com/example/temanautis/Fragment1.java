@@ -120,6 +120,14 @@ public class Fragment1 extends Fragment {
                 startActivity(intent);
             }
         });
+        Button video = (Button)rootview.findViewById(R.id.video);
+        video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Video.class);
+                startActivity(intent);
+            }
+        });
         return rootview;
     }
     private void setupSlider() {

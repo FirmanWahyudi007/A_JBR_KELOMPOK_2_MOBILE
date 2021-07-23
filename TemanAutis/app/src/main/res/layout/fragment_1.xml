@@ -124,7 +124,7 @@
                 android:id="@+id/video"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:background="@drawable/btn_video"/>
+                android:background="@drawable/btn_video" />
 
             <View
                 android:layout_width="140dp"
