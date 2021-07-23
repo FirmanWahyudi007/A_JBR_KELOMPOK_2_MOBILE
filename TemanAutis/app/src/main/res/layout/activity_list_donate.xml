@@ -43,7 +43,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/kembali"
         android:id="@+id/kembali" />
     <androidx.recyclerview.widget.RecyclerView
