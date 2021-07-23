@@ -8,6 +8,9 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.example.temanautis.Model.Login;
+
 import java.util.logging.LogRecord;
 
 public class Splash extends AppCompatActivity {
@@ -19,12 +22,12 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         zoom = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom);
         img = findViewById(R.id.image);
-
-        android.os.Handler h = new Handler();
+        img.startAnimation(zoom);
+        Handler h = new Handler();
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(getApplicationContext(),Slider.class);
+                Intent i = new Intent(getApplicationContext(), TabActivity.class);
                 startActivity(i);
                 finish();
             }
