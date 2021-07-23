@@ -31,13 +31,13 @@
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="290dp"
         android:text="Teman Autis merupakan sistem informasi untuk penyandang autisme yang berbasis WEB dan Android untuk mempermudah anak-anak Autisme dalam mengembangkan dan menunjukan bakat mereka. Dan juga platform ini dapat mempermudah anak-anak Autisme untuk berkomunikasi. Di playform ini, anda dapat berkontribusi untuk membantu anak-anak penyandang autisme dengan berdonasi."
-        android:layout_marginLeft="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
         android:layout_marginTop="291dp"
         android:textStyle="bold"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:textColor="@color/black"
         android:fontFamily="@font/rosarivo"></TextView>
 
