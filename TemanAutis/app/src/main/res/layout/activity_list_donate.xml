@@ -40,13 +40,12 @@
             android:textStyle="bold" />
     </RelativeLayout>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="682dp"
-        android:layout_marginLeft="165dp"
-        android:text="Kembali"
-        android:id="@+id/kembali"
-        android:backgroundTint="@color/design_default_color_background"/>
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/kembali"
+        android:id="@+id/kembali" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_listdonate"
         android:layout_below="@+id/image1"
