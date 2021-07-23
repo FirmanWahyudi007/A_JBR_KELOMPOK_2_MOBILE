@@ -51,7 +51,7 @@ public class DetailAcara extends AppCompatActivity {
         tempat.setText(am.getTempat());
         isi.setText(am.getDeskripsi_acara());
         tanggal.setText(am.getJam_acara()+", "+am.getTanggal_acara());
-        String url = "http://192.168.43.142:8000/images/thumbnail/"+am.getThumbnail();
+        String url = "https://wsjti.id/sipenyaut/public/images/thumbnail/"+am.getThumbnail();
         Log.d("mesagae",am.getLink_acara());
         Picasso.get()
                 .load(url)
@@ -64,7 +64,6 @@ public class DetailAcara extends AppCompatActivity {
                 public void onClick(View v) {
 
                     String url = am.getLink_acara();
-                    Toast.makeText(DetailAcara.this, "Tidak Ada Link", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Intent.ACTION_VIEW);
                     i.setData(Uri.parse(url));
                     startActivity(i);

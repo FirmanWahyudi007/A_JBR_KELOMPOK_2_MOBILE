@@ -22,11 +22,7 @@
         <activity android:name=".Acara" />
         <activity android:name=".ListDonateActivity" />
         <activity android:name=".Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Transfer" />
         <activity android:name=".Konfirmasi" />
@@ -34,12 +30,19 @@
         <activity android:name=".DaftarDonasi" />
         <activity android:name=".Tentang" />
         <activity android:name=".Donasi" />
+        <activity android:name=".Video" />
         <activity android:name=".DetailArtikel" />
         <activity android:name=".Yayasan" />
         <activity android:name=".Artikel" />
         <activity android:name=".TabActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Slider" />
         <activity android:name=".MainActivity" />
 

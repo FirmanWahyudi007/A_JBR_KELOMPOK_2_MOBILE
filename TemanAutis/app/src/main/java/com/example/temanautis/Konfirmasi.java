@@ -46,7 +46,7 @@ public class Konfirmasi extends AppCompatActivity implements EasyPermissions.Per
     Button selectIMG;
     ListDonateModel lm;
     private String id, nominal;
-    TextView metode, keterangan, Id, Nominal;
+    TextView metode, keterangan, Id, Nominal, Donasi;
     Uri selectedImageUri;
     ImageView imageView;
     private String token;
@@ -54,6 +54,7 @@ public class Konfirmasi extends AppCompatActivity implements EasyPermissions.Per
     public static final int MY_PERMISSION_REQUEST = 100;
     private static final int PICK_IMAGE_FROM_GALERY_REQUEST = 0;
     private Bitmap bitmap;
+    private Button konfirmasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,17 +63,19 @@ public class Konfirmasi extends AppCompatActivity implements EasyPermissions.Per
         metode = findViewById(R.id.editTextMetode);
         keterangan = findViewById(R.id.editTextKeterangan);
         Id = findViewById(R.id.editTextId);
+        Donasi = findViewById(R.id.editTextDonasi);
         Nominal = findViewById(R.id.editTextNominal);
         String data = getIntent().getStringExtra("extra");
         Gson gson = new Gson();
         lm = gson.fromJson(data, ListDonateModel.class);
         id = String.valueOf(lm.getId());
+        Donasi.setText(lm.getNama_donasi());
         nominal = String.valueOf(lm.getNominal());
         Id.setText(id);
         Nominal.setText(nominal);
         metode.setText(lm.getMetode_pembayaran());
         keterangan.setText(lm.getKeterangan());
-        Button konfirmasi;
+
         konfirmasi = findViewById(R.id.kirimkonfirmasi);
         selectIMG = findViewById(R.id.buttonChoose);
         imageView = (ImageView) findViewById(R.id.imageView);
@@ -91,7 +94,8 @@ public class Konfirmasi extends AppCompatActivity implements EasyPermissions.Per
         konfirmasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploudImage(selectedImageUri);
+                Intent intent = new Intent(Konfirmasi.this, TabActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -134,7 +138,9 @@ public class Konfirmasi extends AppCompatActivity implements EasyPermissions.Per
             @Override
             public void onResponse(Call<DonateResponse> call, Response<DonateResponse> response) {
                 DonateResponse donateResponse = response.body();
-                Toast.makeText(Konfirmasi.this, "Server Respon : " + response.message(), Toast.LENGTH_LONG).show();
+                Toast.makeText(Konfirmasi.this, "Pesa : Konfirmasi Berhasil Silahkan Kembali", Toast.LENGTH_LONG).show();
+
+
             }
 
             @Override

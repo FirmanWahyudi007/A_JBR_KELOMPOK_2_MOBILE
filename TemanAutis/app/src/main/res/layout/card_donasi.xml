@@ -32,7 +32,7 @@
             android:id="@+id/tv_penermiaDonasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Lengkap"
+            android:text="Nama Donasi"
             android:layout_below="@+id/ys_id"
             android:textColor="@color/black"
             android:textSize="22sp"
@@ -42,10 +42,10 @@
 
         <TextView
             android:id="@+id/tv_yayasanDonasi"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yayasan"
+            android:text="deskripsi"
             android:layout_marginLeft="155dp"
             android:layout_below="@+id/ys_nama"
             android:textSize="20sp"

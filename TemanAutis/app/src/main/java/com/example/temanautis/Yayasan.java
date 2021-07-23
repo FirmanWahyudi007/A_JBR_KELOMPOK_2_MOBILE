@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +51,14 @@ public class Yayasan extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_yayasan);
         rvLm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(rvLm);
+        Button kembali = findViewById(R.id.kembali);
+        kembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Yayasan.this, TabActivity.class);
+                startActivity(intent);
+            }
+        });
         yayasanData();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

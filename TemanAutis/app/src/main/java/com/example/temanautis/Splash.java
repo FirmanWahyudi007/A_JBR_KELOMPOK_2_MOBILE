@@ -19,7 +19,6 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         zoom = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom);
         img = findViewById(R.id.image);
-        img.startAnimation(zoom);
 
         android.os.Handler h = new Handler();
         h.postDelayed(new Runnable() {

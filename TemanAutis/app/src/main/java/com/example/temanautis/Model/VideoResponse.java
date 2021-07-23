@@ -3,14 +3,15 @@ package com.example.temanautis.Model;
 import java.util.List;
 
 public class VideoResponse {
-    private String code,message;
-    private List<VideoModel> videoModelList;
+    private int code;
+    private String message;
+    private List<VideoModel> data;
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
@@ -22,11 +23,11 @@ public class VideoResponse {
         this.message = message;
     }
 
-    public List<VideoModel> getVideoModelList() {
-        return videoModelList;
+    public List<VideoModel> getData() {
+        return data;
     }
 
-    public void setVideoModelList(List<VideoModel> videoModelList) {
-        this.videoModelList = videoModelList;
+    public void setData(List<VideoModel> data) {
+        this.data = data;
     }
 }

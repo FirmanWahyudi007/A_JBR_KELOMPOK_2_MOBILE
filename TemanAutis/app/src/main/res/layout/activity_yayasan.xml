@@ -56,7 +56,14 @@
         android:layout_below="@+id/image1"
         android:paddingStart="10dp"
         android:searchIcon="@drawable/ic_baseline_search_24"/>
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="682dp"
+        android:layout_marginLeft="165dp"
+        android:text="Kembali"
+        android:id="@+id/kembali"
+        android:backgroundTint="@color/design_default_color_background"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

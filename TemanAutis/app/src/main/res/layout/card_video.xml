@@ -3,17 +3,12 @@
     android:layout_width="match_parent" android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="120dp"
         android:padding="6dp"
         android:background="@drawable/bg_list"
         android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:id="@+id/gambar_video"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/ic_launcher_foreground"/>
+        android:layout_marginRight="0dp"
+        android:id="@+id/video_c">
         <TextView
             android:id="@+id/id"
             android:layout_width="wrap_content"
@@ -36,10 +31,10 @@
             />
 
         <TextView
-            android:id="@+id/url_video"
+            android:id="@+id/keterangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="url"
+            android:text="keterangan"
             android:textSize="11sp"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/judul_video"

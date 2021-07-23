@@ -12,7 +12,12 @@
         android:id="@+id/image1"
         android:src="@drawable/bg6"
         android:foregroundGravity="center"/>
-
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/editTextId"
+        android:hint="id"
+        android:visibility="gone"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,9 +49,9 @@
                 android:layout_marginTop="@dimen/loginViewsMargin">
 
                 <EditText
-                    android:id="@+id/editTextId"
+                    android:id="@+id/editTextDonasi"
                     style="@style/modifiedEditText"
-                    android:hint="Id"
+                    android:hint="Donasi"
                     android:textColor="@color/black"
                     android:inputType="textPersonName"
                     android:maxLines="1"
@@ -125,7 +130,7 @@
         android:gravity="center"
         android:layout_marginRight="78dp"
         android:layout_marginLeft="78dp"
-        android:text="KIRIM"
+        android:text="Kembali"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textAlignment="center"

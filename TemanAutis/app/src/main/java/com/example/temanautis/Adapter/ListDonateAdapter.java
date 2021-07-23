@@ -17,7 +17,9 @@ import com.example.temanautis.Model.ListDonateModel;
 import com.example.temanautis.R;
 import com.google.gson.Gson;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import static com.example.temanautis.R.id.card_listdonate;
 
@@ -44,16 +46,26 @@ public class ListDonateAdapter extends RecyclerView.Adapter<ListDonateAdapter.Ho
         holder.ld_id.setText(String.valueOf(LD.getId()));
         holder.nama_donasi.setText(LD.getNama_donasi());
         holder.tanggal.setText(LD.getTanggal());
-        holder.listDonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ctx, Konfirmasi.class);
-                Gson gson = new Gson();
-                String str = gson.toJson(list.get(position), ListDonateModel.class);
-                intent.putExtra("extra",str);
-                ctx.startActivity(intent);
-            }
-        });
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+        holder.nominal.setText(formatRupiah.format(LD.getNominal()));
+        if (LD.getKonfirmasi() == 0){
+            holder.konfirmasi.setText("Belum Upload Bukti");
+            holder.listDonate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ctx, Konfirmasi.class);
+                    Gson gson = new Gson();
+                    String str = gson.toJson(list.get(position), ListDonateModel.class);
+                    intent.putExtra("extra",str);
+                    ctx.startActivity(intent);
+                }
+            });
+        }else if(LD.getKonfirmasi() == 2){
+            holder.konfirmasi.setText("Belum Konfirmasi");
+        }else{
+            holder.konfirmasi.setText("Konfirmasi");
+        }
     }
 
     @Override
@@ -62,14 +74,16 @@ public class ListDonateAdapter extends RecyclerView.Adapter<ListDonateAdapter.Ho
     }
 
     public class HolderData extends RecyclerView.ViewHolder {
-        TextView ld_id,nama_donasi,tanggal;
+        TextView ld_id,nama_donasi,tanggal,konfirmasi,nominal;
         RelativeLayout listDonate;
         public HolderData(@NonNull View itemView) {
             super(itemView);
             ld_id = itemView.findViewById(R.id.ld_id);
+            nominal = itemView.findViewById(R.id.ld_nominal);
             nama_donasi = itemView.findViewById(R.id.ld_nama);
             tanggal = itemView.findViewById(R.id.ld_tanggal);
             listDonate = itemView.findViewById(card_listdonate);
+            konfirmasi = itemView.findViewById(R.id.ld_konfirmasi);
         }
     }
 }
