@@ -5,11 +5,15 @@
         <item>@font/alegreya_sc_bold</item>
         <item>@font/arbutus_slab</item>
         <item>@font/aref_ruqaa_bold</item>
+        <item>@font/cormorant_semibold</item>
         <item>@font/elsie</item>
         <item>@font/junge</item>
         <item>@font/purple_purse</item>
+        <item>@font/quando</item>
         <item>@font/roboto_slab_bold</item>
         <item>@font/roboto_slab_thin</item>
         <item>@font/rosarivo</item>
+        <item>@font/cormorant_semibold</item>
+        <item>@font/quando</item>
     </array>
 </resources>

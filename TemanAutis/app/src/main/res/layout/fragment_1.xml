@@ -4,136 +4,188 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/rectangle_11"
+    android:background="@color/white"
     tools:context=".Fragment1">
 
     <!-- TODO: Update blank fragment layout -->
     <!-- set layout for slider -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="127dp"
-        android:id="@+id/top"
-        android:background="@drawable/bg4"/>
-
-    <RelativeLayout
-        android:id="@+id/layout_top"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="10dp"
-        >
-
-        <FrameLayout
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <com.example.temanautis._sliders.SliderView
-                android:id="@+id/sliderView"
+            <TextView
+                android:id="@+id/TextView1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/cormorant_semibold"
+                android:text="Teman Autis ."
+                android:textColor="#0271AC"
+                android:textSize="33sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="153dp"
+                android:gravity="center"
+                android:layout_below="@+id/TextView1">
+                <ImageView
+                    android:layout_width="311dp"
+                    android:layout_height="153dp"
+                    android:background="@drawable/bg_button1"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"/>
 
-        </FrameLayout>
+                <Button
+                    android:id="@+id/btn_donasi"
+                    android:layout_width="118dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="193dp"
+                    android:layout_marginLeft="193dp"
+                    android:background="@drawable/bg_button3"
+                    android:fontFamily="@font/quando"
+                    android:text="Donasi"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="119dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/money"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="96dp"
+                    android:layout_marginRight="96dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="407dp"
+                android:layout_marginTop="240dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:layout_width="177dp"
+                    android:layout_height="407dp"
+                    android:background="@drawable/bg_button1"/>
+                <Button
+                    android:layout_width="177dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_button3"
+                    android:layout_alignParentBottom="true"
+                    android:text="Video"
+                    android:fontFamily="@font/quando"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:id="@+id/video"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="151dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/video"
+                    android:layout_marginTop="106dp"
+                    android:layout_marginLeft="13dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="212dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/Relative"
+                android:layout_marginStart="22dp">
+                <ImageView
+                    android:layout_width="177dp"
+                    android:layout_height="212dp"
+                    android:background="@drawable/bg_button1"/>
+                <Button
+                    android:layout_width="177dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_button3"
+                    android:layout_alignParentBottom="true"
+                    android:text="ACARA"
+                    android:id="@+id/btn_acara"
+                    android:fontFamily="@font/quando"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="151dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/calender"
+                    android:layout_marginLeft="13dp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="166dp"
+                android:layout_below="@+id/Relative"
+                android:layout_marginTop="27dp"
+                android:id="@+id/Relative1"
+                android:layout_marginLeft="22dp"
+                android:layout_marginStart="22dp">
+                <ImageView
+                    android:layout_width="177dp"
+                    android:layout_height="166dp"
+                    android:background="@drawable/bg_button1"/>
+                <Button
+                    android:layout_width="177dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_button3"
+                    android:layout_alignParentBottom="true"
+                    android:text="ARTIKEL"
+                    android:id="@+id/artikel"
+                    android:fontFamily="@font/quando"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="151dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="13dp"
+                    android:src="@drawable/artikel"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_indicator"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="153dp"
+                android:gravity="center"
+                android:layout_below="@+id/Relative1">
+                <ImageView
+                    android:layout_width="311dp"
+                    android:layout_height="153dp"
+                    android:background="@drawable/bg_button1"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"/>
 
-        <LinearLayout
-            android:id="@+id/pagesContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"/>
+                <Button
+                    android:layout_width="118dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="193dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_button3"
+                    android:text="YAYASAN"
+                    android:id="@+id/yayasan"
+                    android:fontFamily="@font/quando"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="193dp" />
+                <ImageView
+                    android:layout_width="119dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/school"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="96dp"
+                    android:layout_marginRight="96dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 
-    </RelativeLayout>
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_below="@+id/layout_top">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/layout_top"
-        android:background="@drawable/rectangle_14"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/linear1"
-            android:gravity="center_horizontal">
-            <Button
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:background="@drawable/btn_donasi"
-                android:id="@+id/btn_donasi"/>
-
-            <Button
-                android:id="@+id/btn_acara"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:background="@drawable/btn_acara"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@+id/linear1"
-            android:id="@+id/linear2"
-            android:gravity="center_horizontal">
-            <Button
-                android:id="@+id/artikel"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:background="@drawable/btn_artikel"/>
-
-            <Button
-                android:id="@+id/yayasan"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:background="@drawable/btn_yayasan"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@+id/linear2"
-            android:gravity="center_horizontal">
-            <Button
-                android:id="@+id/video"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:background="@drawable/btn_video" />
-
-            <View
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                />
-
-        </LinearLayout>
-    </RelativeLayout>
-</ScrollView>
 
 
 </RelativeLayout>

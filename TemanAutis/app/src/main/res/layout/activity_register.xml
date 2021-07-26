@@ -38,7 +38,7 @@
                     android:layout_height="150dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/children" />
+                    android:src="@drawable/logo" />
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView

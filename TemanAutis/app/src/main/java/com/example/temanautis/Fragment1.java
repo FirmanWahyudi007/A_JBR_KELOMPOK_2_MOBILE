@@ -85,9 +85,6 @@ public class Fragment1 extends Fragment {
         // Inflate the layout for this fragment
 
         View rootview= inflater.inflate(R.layout.fragment_1, container, false);
-        sliderView = (SliderView) rootview.findViewById(R.id.sliderView);
-        mLinearLayout = (LinearLayout) rootview.findViewById(R.id.pagesContainer);
-        setupSlider();
         Button artikel = (Button) rootview.findViewById(R.id.artikel);
         artikel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,19 +126,5 @@ public class Fragment1 extends Fragment {
             }
         });
         return rootview;
-    }
-    private void setupSlider() {
-        sliderView.setDurationScroll(800);
-        List<Fragment> fragments = new ArrayList<>();
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-1.jpg"));
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-2.jpg"));
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-3.jpg"));
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-4.jpg"));
-
-        mAdapter = new SliderPagerAdapter(getFragmentManager(), fragments);
-        sliderView.setAdapter(mAdapter);
-        mIndicator = new SliderIndicator(getActivity(), mLinearLayout, sliderView, R.drawable.indicator_circle);
-        mIndicator.setPageCount(fragments.size());
-        mIndicator.show();
     }
 }
