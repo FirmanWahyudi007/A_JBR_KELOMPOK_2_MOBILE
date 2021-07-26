@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Tentang"
-    android:background="#FFB932"
+    android:background="#7AD894"
     >
     <RelativeLayout
         android:layout_width="match_parent"

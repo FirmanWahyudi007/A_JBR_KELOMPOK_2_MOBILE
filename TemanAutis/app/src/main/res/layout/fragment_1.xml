@@ -72,7 +72,7 @@
                 <ImageView
                     android:layout_width="177dp"
                     android:layout_height="407dp"
-                    android:background="@drawable/bg_button1"/>
+                    android:background="@drawable/bg_button2"/>
                 <Button
                     android:layout_width="177dp"
                     android:layout_height="40dp"
@@ -101,7 +101,7 @@
                 <ImageView
                     android:layout_width="177dp"
                     android:layout_height="212dp"
-                    android:background="@drawable/bg_button1"/>
+                    android:background="@drawable/bg_button2"/>
                 <Button
                     android:layout_width="177dp"
                     android:layout_height="40dp"
@@ -131,7 +131,7 @@
                 <ImageView
                     android:layout_width="177dp"
                     android:layout_height="166dp"
-                    android:background="@drawable/bg_button1"/>
+                    android:background="@drawable/bg_button2"/>
                 <Button
                     android:layout_width="177dp"
                     android:layout_height="40dp"

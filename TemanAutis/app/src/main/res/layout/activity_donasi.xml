@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Donasi"
-    android:background="#ffe268">
+    android:background="@color/white">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="119dp"
